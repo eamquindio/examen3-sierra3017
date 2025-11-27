@@ -25,6 +25,11 @@ public class Vehiculo {
      * @param tipo Tipo de vehículo ("SEDAN", "SUV" o "CAMION")
      */
     public Vehiculo(String placa, int modelo, String color, Propietario propietario, String tipo) {
+        this.placa = placa;
+        this.modelo = modelo;
+        this.color = color;
+        this.propietario = propietario;
+        this.tipo = tipo;
         // TODO: Implementar constructor
     }
 
@@ -75,6 +80,14 @@ public class Vehiculo {
      * @return La tarifa por hora
      */
     public double obtenerTarifaHora() {
+        switch (tipo) {
+            case "SEDAN":
+                return 1500;
+            case "SUV":
+                return 2300;
+            case "CAMION":
+                return 3000;
+        }
         // TODO: Implementar método usando switch
         return 0;
     }
